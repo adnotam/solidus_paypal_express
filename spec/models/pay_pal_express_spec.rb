@@ -1,10 +1,10 @@
 describe Spree::Gateway::PayPalExpress do
-  let(:gateway) { Spree::Gateway::PayPalExpress.create!(name: "PayPalExpress", environment: Rails.env) }
+  let(:gateway) { Spree::Gateway::PayPalExpress.create!(name: "PayPalExpress") }
 
   context "payment purchase" do
     let(:payment) do
       payment = FactoryGirl.create(:payment, payment_method: gateway, amount: 10)
-      allow(payment).to receive_messages source: mock_model(Spree::PaypalExpressCheckout, token: 'fake_token', payer_id: 'fake_payer_id', update: true)
+      allow(payment).to receive_messages source: double(Spree::PaypalExpressCheckout, token: 'fake_token', payer_id: 'fake_payer_id', update: true)
       payment
     end
 

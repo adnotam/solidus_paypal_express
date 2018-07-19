@@ -51,8 +51,8 @@ require 'spree/testing_support/factories'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
+require 'solidus_paypal_express/factories'
 
-require 'spree_paypal_express/factories'
 FactoryGirl.find_definitions
 
 RSpec.configure do |config|
