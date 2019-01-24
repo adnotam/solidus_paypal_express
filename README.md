@@ -1,8 +1,8 @@
 # Solidus PayPal Express
 
-[![Build Status](https://travis-ci.org/solidusio-contrib/solidus_paypal_express.svg?branch=master)](https://travis-ci.org/spree-contrib/better_spree_paypal_express)
+[![Build Status](https://travis-ci.org/adnotam/solidus_paypal_express.svg?branch=master)](https://travis-ci.org/adnotam/solidus_paypal_express)
 
-This is a "re-do" of the official [spree_paypal_express][4] extension. The old extension is extremely hard to maintain and complex.
+This is a port of the official [spree_paypal_express][4] extension.
 
 Behind-the-scenes, this extension uses [PayPal's Merchant Ruby SDK](https://github.com/paypal/merchant-sdk-ruby).
 
@@ -129,4 +129,4 @@ Copyright (c) 2019 Solidus Commerce and contributors, released under the [New BS
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/adnotam/solidus_paypal_express/issues
 [3]: https://github.com/adnotam/solidus_paypal_express/tree/master/LICENSE.md
-[4]: https://github.com/adnotam/solidus_paypal_express
+[4]: https://github.com/spree-contrib/better_spree_paypal_express
