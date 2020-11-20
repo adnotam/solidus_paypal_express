@@ -1,0 +1,5 @@
+bump:
+  recurse: false
+  file: 'lib/solidus_paypal_express/version.rb'
+  message: Bump SolidusPaypalExpress to %{version}
+  tag: true
