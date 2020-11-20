@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "solidus_core", ">= 1.0", "< 3"
   s.add_dependency 'paypal-sdk-merchant', '1.117.2'
+  s.add_dependency 'sass-rails', '~> 5.0.8'
 
   s.add_development_dependency "solidus"
   s.add_development_dependency "solidus_auth_devise"
@@ -37,7 +38,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-activemodel-mocks'
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'simplecov-rcov'
