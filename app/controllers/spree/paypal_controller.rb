@@ -166,7 +166,7 @@ module Spree
       return {} unless address_required?
 
       {
-        Name: current_order.bill_address.try(:full_name),
+        Name: SolidusSupport.combined_first_and_last_name_in_address? ? current_order.bill_address.try(:name) : current_order.bill_address.try(:full_name),
         Street1: current_order.bill_address.address1,
         Street2: current_order.bill_address.address2,
         CityName: current_order.bill_address.city,
