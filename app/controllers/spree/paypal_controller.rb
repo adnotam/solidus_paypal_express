@@ -37,11 +37,11 @@ module Spree
           redirect_to payment_method.
             express_checkout_url(pp_response, useraction: 'commit')
         else
-          flash[:error] = Spree.t('flash.generic_error', scope: 'paypal', reasons: pp_response.errors.map(&:long_message).join(" "))
+          flash[:error] = I18n.t('flash.generic_error', scope: 'spree.paypal', reasons: pp_response.errors.map(&:long_message).join(" "))
           redirect_to checkout_state_path(:payment)
         end
       rescue SocketError
-        flash[:error] = Spree.t('flash.connection_failed', scope: 'paypal')
+        flash[:error] = I18n.t('flash.connection_failed', scope: 'spree.paypal')
         redirect_to checkout_state_path(:payment)
       end
     end
@@ -65,7 +65,7 @@ module Spree
       order.contents.advance
       order.complete if order.can_complete?
       if order.complete?
-        flash.notice = Spree.t(:order_processed_successfully)
+        flash.notice = I18n.t('spree.order_processed_successfully')
         flash[:order_completed] = true
         session[:order_id] = nil
         redirect_to completion_route(order)
@@ -75,7 +75,7 @@ module Spree
     end
 
     def cancel
-      flash[:notice] = Spree.t('flash.cancel', scope: 'paypal')
+      flash[:notice] = I18n.t('flash.cancel', scope: 'spree.paypal')
       order = current_order || raise(ActiveRecord::RecordNotFound)
       redirect_to checkout_state_path(order.state, paypal_cancel_token: params[:token])
     end

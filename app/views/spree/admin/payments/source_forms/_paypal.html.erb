@@ -1,5 +1,5 @@
 <div id='paypal-warning' style="display:none">
-  <strong><%= Spree.t('no_payment_via_admin_backend', :scope => 'paypal') %></strong>
+  <strong><%= I18n.t('no_payment_via_admin_backend', scope: 'spree.paypal') %></strong>
 </div>
 <script>
   SolidusPaypalExpress.paymentMethodID = "<%= payment_method.id %>"
