@@ -1,5 +1,9 @@
 # Changelog
 
+## [v2.1.1](https://github.com/adnotam/solidus_paypal_express/tree/v2.1.1) (2021-06-11)
+
+[Full Changelog](https://github.com/adnotam/solidus_paypal_express/compare/v2.1.0...v2.1.1)
+
 ## [v2.1.0](https://github.com/adnotam/solidus_paypal_express/tree/v2.1.0) (2020-11-20)
 
 [Full Changelog](https://github.com/adnotam/solidus_paypal_express/compare/v2.0.0...v2.1.0)
